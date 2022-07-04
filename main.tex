@@ -1,0 +1,309 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{cite}
+\input{glyphtounicode}
+
+
+%\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false,backend=biber]{biblatex}
+\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=none,dashed=false,citestyle=numeric-comp,backend=biber]{biblatex}
+\addbibresource{journal.bib}
+\addbibresource{conference.bib}
+\addbibresource{preprint.bib}
+
+\usepackage{customcv}
+\boldname{Horiguchi}{Shota}{S.}
+\AtBeginBibliography{\small}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\makeatletter
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+      %\textit{\small#3} & \textit{\small #4} \\
+      \@resumeSubheadingIter
+}
+\newcommand\@resumeSubheadingIter{% 
+    \@ifnextchar\bgroup{\@resumeSubheadingPosition}{\@resumeSubheadingEnd}}
+\newcommand\@resumeSubheadingPosition[2]{
+    \\\textit{\small #1} & \textit{\small #2}
+    \@resumeSubheadingIter
+}%&\textit{#2}
+
+\newcommand\@resumeSubheadingEnd{
+    \end{tabular*}\vspace{-7pt}
+}
+\makeatother
+
+\newcommand{\resumeShortSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\nocite{*}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Shota Horiguchi} \\ \vspace{1pt}
+    \href{mailto:horiguchi@ieee.org}{\underline{horiguchi@ieee.org}} $|$ 
+    \href{mailto:shota.horiguchi.wk@hitachi.com}{\underline{shota.horiguchi.wk@hitachi.com}} $|$ 
+    \href{linkedin.com/in/shota-horiguchi}{\underline{linkedin.com/in/shota-horiguchi}} $|$
+    %\href{https://github.com/...}{\underline{github.com/hshota0530}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Tsukuba}{Ibaraki, Japan}
+      {Doctor of Information Science and Technology}{Apr. 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Supervisor: Assoc. Prof. Takeshi Yamada}
+      \resumeItemListEnd
+    \resumeSubheading
+      {The University of Tokyo}{Tokyo, Japan}
+      {Master of Information Science and Technology}{Apr. 2015 -- May 2017}
+      \resumeItemListStart
+        \resumeItem{Thesis title: Personalized object recognition}
+        \resumeItem{Supervisor: Prof. Kiyoharu Aizawa}
+      \resumeItemListEnd
+    \resumeSubheading
+      {The University of Tokyo}{Tokyo, Japan}
+      {Bachelor of Engineering}{Apr. 2011 -- May 2015}
+      \resumeItemListStart
+        \resumeItem{Supervisor: Prof. Kiyoharu Aizawa}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experiences}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hitachi, Ltd. Research and Development Group}{Tokyo, Japan}
+      {Senior Researcher}{October 2021 -- Present}
+      {Researcher}{April 2017 -- September 2021}
+      \resumeItemListStart
+        \resumeItem{Meeting transcription using asynchronous distributed microphones (2019--Present)}
+        \resumeItem{Multimodal recognition and interaction for humanoid robots (2017--2019)}
+      \resumeItemListEnd
+    \begin{comment}
+    \resumeSubheading
+      {Johns Hopkins University}{Maryland, US}
+      {Visiting Researcher}{September 2019 -- October 2019}
+      \resumeItemListStart
+        \resumeItem{Audio-visual speech separation}
+      \resumeItemListEnd
+    \end{comment}
+    \resumeSubheading
+      {Yahoo Japan Corporation}{Tokyo, Japan}
+      {Research \& Development Intern}{August, October -- December 2015}
+      \resumeItemListStart
+        \resumeItem{Click through rates prediction}
+      \resumeItemListEnd
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Meeting transcription using distributed microphones}}{April 2019 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a meeting transcription framework based on distributed microphones, e.g., smartphones or tablets \cite{horiguchi2020utterancewise}.}
+            \resumeItem{Developed its component technologies including speech separation \cite{horiguchi2021blockonline} and speaker diarization \cite{horiguchi2020endtoend,horiguchi2021endtoend}.}
+            \resumeItem{Joined the Seventh Frederick Jelinek Memorial Summer Workshop (JSALT) as a part-time member, especially for discussion and technical support about speaker diarization \cite{horiguchi2021endtoend}.}
+            \resumeItem{Won the second prize in the Third DIHARD Speech Diarization Challenge (DIHARD III).}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Multi-modal recognition and human robot interaction}}{April 2017 -- March 2019}
+          \resumeItemListStart
+            \resumeItem{Developed multi-modal (especially audio-visual) functions for Hitachi's humanoid robot named EMIEW3, including multi-modal response obligation detection \cite{horiguchi2019multimodal} and cross-modal biometric search between faces and voices \cite{horiguchi2018facevoice}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Personalized image recognition}}{April 2014 -- March 2017}
+          \resumeItemListStart
+            \resumeItem{Developed personalized image classifiers, especially for daily life-logging service \cite{horiguchi2018personalized}.}
+            \resumeItem{Investigated better image representations for more general settings using convolutional neural networks \cite{horiguchi2020significance}.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeShortSubheading
+      {Journal Articles}{}
+      \nocite{*}
+      %\printbibliography
+      \printbibliography[type=article,heading=none]
+    \resumeShortSubheading
+      {Conference \& Workshop Proceedings (Peer-reviewed, first author)}{}
+      \printbibliography[type=inproceedings,heading=none,keyword=first]
+    \resumeShortSubheading
+      {Conference \& Workshop Proceedings (Peer-reviewed, co-author)}{}
+      \printbibliography[type=inproceedings,heading=none,notkeyword=first]
+    \resumeShortSubheading
+      {Preprints}{}
+      \printbibliography[type=misc,heading=none]
+    \resumeShortSubheading
+      {\textbf{Invited Talk}}{}
+      \resumeItemListStart
+        \resumeItem{``Face-Voice Matching Using Cross-Modal Embeddings,'' in MIRU, July 29--Aug. 1, 2020 (in Japanese).}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Awards}
+  \resumeItemListStart
+    \resumeItem{ITE Outstanding Research Presentation Award, The Institute of Image Information and Television Engineers, 2017.}
+  \resumeItemListEnd
+
+\section{Competitions}
+  \resumeItemListStart
+    \resumeItem{2nd prize in the Third DIHARD Speech Diarization Challenge (DIHARD III), 2021  (as a lead author).}
+    \resumeItem{2nd prize in the 5th CHiME Speech Separation and Recognition Challenge (CHiME-5), 2018.}
+    %\resumeItem{2nd SemEval 2020 Task 8}
+  \resumeItemListEnd
+
+\section{Patents and Applications}
+  \resumeItemListStart
+    \resumeItem{US Patent 11,107,476 B2 ``Speaker estimation method and speaker estimation device,'' August 31, 2021.}
+    \resumeItem{Contributed to six patent applications at Hitachi}
+  \resumeItemListEnd
+  
+\section{Professional Activities/Service}
+2022 Session chair (ICASSP, in-person conference at Singapore)
+    
+\section{Review Experiences}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Journals}{: IEEE Transactions on Pattern Recognition and Machine Intelligence, IEEE Transactions on Multimedia, IEEE Transactions on Audio, Speech and Language Processing, IEEE Transactions on Neural Networks and Learning Systems, Elsevier Neural Networks, Elsevier Computer Speech \& Language} \\
+     \textbf{Conferences/Workshops}{: ICASSP (2019--2022), ICML (2020), MLSP (2021), EUSIPCO (2021--2022) DCASE (2020--2021), APSIPA (2021), RO-MAN (2022)}
+    }}
+ \end{itemize}
+%
+%-----------PROGRAMMING SKILLS-----------
+%\section{Technical Skills}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%    \small{\item{
+%     \textbf{Languages}{: Python, C/C++, Bash, LaTeX, JavaScript, HTML, CSS} \\
+%     \textbf{Frameworks}{: PyTorch, Chainer, Caffe, Kaldi} \\
+%     \textbf{Software \& Tools}{: Git, Vim}
+%    }}
+% \end{itemize}
+
+\section{Language Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{Japanese (native), English (basic)}}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
