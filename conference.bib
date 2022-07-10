@@ -5,7 +5,11 @@
     author={Horiguchi, Shota and Takashima, Yuki and Garc{\'i}a, Paola and Watanabe, Shinji and Kawaguchi, Yohei},
     year={2022},
     pages={7332--7336},
-    keywords={first}
+    keywords={first},
+    abbr={ICASSP},
+    abstract={Recent progress on end-to-end neural diarization (EEND) has en-abled overlap-aware speaker diarization with a single neural net-work. This paper proposes to enhance EEND by using multi-channel signals from distributed microphones. We replace Transformer en-coders in EEND with two types of encoders that process a multi-channel input: spatio-temporal and co-attention encoders. Both are independent of the number and geometry of microphones and suitable for distributed microphone settings. We also propose a model adaptation method using only single-channel recordings. With simulated and real-recorded datasets, we demonstrated that the proposed method outperformed conventional EEND when a multi-channel in-put was given while maintaining comparable performance with a single-channel input. We also showed that the proposed method performed well even when spatial information is inoperative given multi-channel inputs, such as in hybrid meetings in which the utterances of multiple remote participants are played back from the same loudspeaker.},
+    html={https://ieeexplore.ieee.org/document/9746749},
+    arxiv={2110.04694}
 }
 @inproceedings{horiguchi2021towards,
     title={Towards Neural Diarization for Unlimited Numbers of Speakers Using Global and Local Attractors},
@@ -13,7 +17,11 @@
     author={Horiguchi, Shota and Garc{\'i}a, Paola and Watanabe, Shinji and Xue, Yawen and Takashima, Yuki and Kawaguchi, Yohei},
     year={2021},
     pages={98--105},
-    keywords={first}
+    keywords={first},
+    abbr={ASRU},
+    abstract={Attractor-based end-to-end diarization is achieving comparable accuracy to the carefully tuned conventional clustering-based methods on challenging datasets. However, the main drawback is that it cannot deal with the case where the number of speakers is larger than the one observed during training. This is because its speaker counting relies on supervised learning. In this work, we introduce an unsupervised clustering process embedded in the attractor-based end-to-end diarization. We first split a sequence of frame-wise embeddings into short subsequences and then perform attractor-based diarization for each subsequence. Given subsequence-wise diarization results, inter-subsequence speaker correspondence is obtained by unsupervised clustering of the vectors computed from the attractors from all the subsequences. This makes it possible to produce diarization results of a large number of speakers for the whole recording even if the number of output speakers for each subsequence is limited. Experimental results showed that our method could produce accurate diarization results of an unseen number of speakers. Our method achieved 11.84 %, 28.33 %, and 19.49 % on the CALLHOME, DI-HARD II, and DIHARD III datasets, respectively, each of which is better than the conventional end-to-end diarization methods.},
+    html={https://ieeexplore.ieee.org/document/9687875},
+    arxiv={2107.01545}
 }
 @inproceedings{horiguchi2021endtoend,
     title={End-to-End Speaker Diarization as Post-Processing},
@@ -21,7 +29,11 @@
     author={Horiguchi, Shota and Garc{\'i}a, Paola and Fujita, Yusuke and Watanabe, Shinji and Nagamatsu, Kenji},
     year={2021},
     pages={7188--7192},
-    keywords={first}
+    keywords={first},
+    abbr={ICASSP},
+    abstract={This paper investigates the utilization of an end-to-end diarization model as post-processing of conventional clustering-based diarization. Clustering-based diarization methods partition frames into clusters of the number of speakers; thus, they typically cannot handle overlapping speech because each frame is assigned to one speaker. On the other hand, some end-to-end diarization methods can handle overlapping speech by treating the problem as multi-label classification. Although some methods can treat a flexible number of speakers, they do not perform well when the number of speakers is large. To compensate for each other’s weakness, we propose to use a two-speaker end-to-end diarization method as post-processing of the results obtained by a clustering-based method. We iteratively select two speakers from the results and update the results of the two speakers to improve the overlapped region. Experimental results show that the proposed algorithm consistently improved the performance of the state-of-the-art methods across CALLHOME, AMI, and DIHARD II datasets.},
+    html={https://ieeexplore.ieee.org/document/9413436},
+    arxiv={2012.10055}
 }
 @inproceedings{horiguchi2021blockonline,
     title={Block-Online Guided Source Separation},
@@ -29,7 +41,11 @@
     author={Horiguchi, Shota and Fujita, Yusuke and Nagamatsu, Kenji},
     year={2021},
     pages={236--242},
-    keywords={first}
+    keywords={first},
+    abbr={SLT},
+    abstract={We propose a block-online algorithm of guided source separation (GSS). GSS is a speech separation method that uses diarization information to update parameters of the generative model of observation signals. Previous studies have shown that GSS performs well in multi-talker scenarios. However, it requires a large amount of calculation time, which is an obstacle to the deployment of online applications. It is also a problem that the offline GSS is an utterance-wise algorithm so that it produces latency according to the length of the utterance. With the proposed algorithm, block-wise input samples and corresponding time annotations are concatenated with those in the preceding context and used to update the parameters. Using the context enables the algorithm to estimate time-frequency masks accurately only from one iteration of optimization for each block, and its latency does not depend on the utterance length but predetermined block length. It also reduces calculation cost by updating only the parameters of active speakers in each block and its context. Evaluation on the CHiME-6 corpus and a meeting corpus showed that the proposed algorithm achieved almost the same performance as the conventional offline GSS algorithm but with 32x faster calculation, which is sufficient for real-time applications.},
+    html={https://ieeexplore.ieee.org/document/9383510},
+    arxiv={2011.07791}
 }
 @inproceedings{horiguchi2020endtoend,
     title={End-to-End Speaker Diarization for an Unknown Number of Speakers with Encoder-Decoder Based Attractors},
@@ -37,7 +53,11 @@
     author={Horiguchi, Shota and Fujita, Yusuke and Watanabe, Shinji and Xue, Yawen and Nagamatsu, Kenji},
     pages={269--273},
     year={2020},
-    keywords={first}
+    keywords={first},
+    abbr={INTERSPEECH},
+    abstract={End-to-end speaker diarization for an unknown number of speakers is addressed in this paper. Recently proposed end-to-end speaker diarization outperformed conventional clustering-based speaker diarization, but it has one drawback: it is less flexible in terms of the number of speakers. This paper proposes a method for encoder-decoder based attractor calculation (EDA), which first generates a flexible number of attractors from a speech embedding sequence. Then, the generated multiple attractors are multiplied by the speech embedding sequence to produce the same number of speaker activities. The speech embedding sequence is extracted using the conventional self-attentive end-to-end neural speaker diarization (SA-EEND) network. In a two-speaker condition, our method achieved a 2.69% diarization error rate (DER) on simulated mixtures and a 8.07% DER on the two-speaker subset of CALLHOME, while vanilla SA-EEND attained 4.56% and 9.54%, respectively. In unknown numbers of speakers conditions, our method attained a 15.29% DER on CALLHOME, while the x-vector-based clustering method achieved a 19.43% DER.},
+    html={https://www.isca-speech.org/archive/interspeech_2020/horiguchi20_interspeech.html},
+    arxiv={2005.09921}
 }
 @inproceedings{horiguchi2020utterancewise,
     title={Utterance-Wise Meeting Transcription System Using Asynchronous Distributed Microphones},
@@ -45,7 +65,10 @@
     author={Horiguchi, Shota and Fujita, Yusuke and Nagamatsu, Kenji},
     pages={344--348},
     year={2020},
-    keywords={first}
+    keywords={first},
+    abbr={INTERSPEECH},
+    abstract={A novel framework for meeting transcription using asynchronous microphones is proposed in this paper. It consists of audio synchronization, speaker diarization, utterance-wise speech enhancement using guided source separation, automatic speech recognition, and duplication reduction. Doing speaker diarization before speech enhancement enables the system to deal with overlapped speech without considering sampling frequency mismatch between microphones. Evaluation on our real meeting datasets showed that our framework achieved a character error rate (CER) of 28.7% by using 11 distributed microphones, while a monaural microphone placed on the center of the table had a CER of 38.2%. We also showed that our framework achieved CER of 21.8%, which is only 2.1 percentage points higher than the CER in headset microphone-based transcription.},
+    html={https://www.isca-speech.org/archive/interspeech_2020/horiguchi20b_interspeech.html}
 }
 @inproceedings{horiguchi2019multimodal,
     title={Multimodal Response Obligation Detection with Unsupervised Online Domain Adaptation},
@@ -53,7 +76,10 @@
     author={Horiguchi, Shota and Kanda, Naoyuki and Nagamatsu, Kenji},
     pages={4180--4184},
     year={2019},
-    keywords={first}
+    keywords={first},
+    abbr={INTERSPEECH},
+    abstract={Response obligation detection, which determines whether a dialogue robot has to respond to a detected utterance, is an important function for intelligent dialogue robots. Some studies have tackled this problem; however, they narrow their applicability by impractical assumptions or use of scenario-specific features. Some attempts have been made to widen the applicability by avoiding the use of text modality, which is said to be highly domain dependent, but it decreases the detection accuracy. In this paper, we propose a novel multimodal response obligation detector, which uses visual, audio, and text information for highly-accurate detection, with its unsupervised online domain adaptation to solve the domain dependency problem. Our domain adaptation consists of the weights adaptation of the logistic regression for every modality and an embedding assignment for new words to cope with the high domain dependency of text modality. Experimental results on the dataset collected at a station and commercial building showed that our method achieved high response obligation detection accuracy and was able to handle domain change automatically.},
+    html={https://www.isca-speech.org/archive/interspeech_2019/horiguchi19_interspeech.html}
 }
 @inproceedings{horiguchi2018facevoice,
     title={Face-Voice Matching Using Cross-Modal Embeddings},
@@ -61,56 +87,84 @@
     author={Horiguchi, Shota and Kanda, Naoyuki and Nagamatsu, Kenji},
     pages={1011-1019},
     year={2018},
-    keywords={first}
+    keywords={first},
+    abbr={ACMMM},
+    abstract={Face-voice matching is a task to find correspondence between faces and voices. Many researches in cognitive science have confirmed human ability in the face-voice matching tasks. Such ability is useful for creating natural human machine interaction systems and in many other applications. In this paper, we propose a face-voice matching model that learns cross-modal embeddings between face images and voice characteristics. We constructed a novel FVCeleb dataset which consists of face images and utterances from 1,078 persons. These persons were selected from the MS-Celeb-1M face image dataset and the VoxCeleb audio dataset. In two-alternative forced-choice matching task with an audio input and two face-image candidates of the same gender, our model achieved 62.2% and 56.5% accuracy on the FVCeleb and the subset of the GRID corpus, respectively. These results are very similar to human performance reported in cognitive science studies.},
+    html={https://dl.acm.org/doi/10.1145/3240508.3240601}
 }
 @inproceedings{horiguchi2016lognormal,
-    title={The log-normal distribution of the size of objects in daily meal images and its application to the efficient reduction of object proposals},
+    title={The Log-Normal Distribution of the Size of Objects in Daily Meal Images and Its Application to the Efficient Reduction of Object Proposals},
     booktitle={IEEE International Conference on Image Processing (ICIP)},
     author={Horiguchi, Shota and Aizawa, Kiyoharu and Ogawa, Makoto},
     pages={3668--3672},
     year={2016},
-    keywords={first}
+    keywords={first},
+    abbr={ICIP},
+    abstract={In general, object-detection methods apply classifiers to pre-calculated object proposals. It is therefore important to minimize the number of proposals to achieve computational efficiency. In this paper, we show that the region size for food objects in recorded images of daily food follows a lognormal distribution, which is different from the distribution for widely used datasets collected by querying the names of dishes. We explain this characteristic using Gibrat's law, and construct a model for the region-size distribution of objects in images. We applied the model to the filtering of object proposals generated by selective search and edge boxes. We obtained a significant reduction of 40.6% in the number of hypotheses compared with a conventional selective search, despite a decrease of only 0.007 in the Mean Average Best Overlap.},
+    html={https://ieeexplore.ieee.org/abstract/document/7533044/}
 }
 
 % Co-author
 @inproceedings{takashima2022updating,
     author={Takashima, Yuki and Horiguchi, Shota and Watanabe, Shinji and Garcia, Paola and Kawaguchi, Yohei},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     title={Updating Only Encoders Prevents Catastrophic Forgetting of End-to-End {ASR} Models},
-    year={2022}
+    year={2022},
+    abbr={INTERSPEECH},
+    abstract={In this paper, we present an incremental domain adaptation technique to prevent catastrophic forgetting for an end-to-end automatic speech recognition (ASR) model. Conventional approaches require extra parameters of the same size as the model for optimization, and it is difficult to apply these approaches to end-to-end ASR models because they have a huge amount of parameters. To solve this problem, we first investigate which parts of end-to-end ASR models contribute to high accuracy in the target domain while preventing catastrophic forgetting. We conduct experiments on incremental domain adaptation from the LibriSpeech dataset to the AMI meeting corpus with two popular end-to-end ASR models and found that adapting only the linear layers of their encoders can prevent catastrophic forgetting. Then, on the basis of this finding, we develop an element-wise parameter selection focused on specific layers to further reduce the number of fine-tuning parameters. Experimental results show that our approach consistently prevents catastrophic forgetting compared to parameter selection from the whole model.},
+    arxiv={2207.00216}
 }
 @inproceedings{morishita2022rethinking,
     author={Morishita, Terufumi and Morio, Gaku and Horiguchi, Shota and Ozaki, Hiroaki and Nukaga, Nobuo},
     booktitle={International Conference on Machine Learning (ICML)},
     title={Rethinking {Fano}'s Inequality in Ensemble Learning},
-    year={2022}
+    year={2022},
+    abbr={ICML},
+    abstract={We propose a fundamental theory on ensemble learning that evaluates a given ensemble system by a well-grounded set of metrics. Previous studies used a variant of Fano's inequality of information theory and derived a lower bound of the classification error rate on the basis of the accuracy and diversity of models. We revisit the original Fano's inequality and argue that the studies did not take into account the information lost when multiple model predictions are combined into a final prediction. To address this issue, we generalize the previous theory to incorporate the information loss. Further, we empirically validate and demonstrate the proposed theory through extensive experiments on actual systems. The theory reveals the strengths and weaknesses of systems on each metric, which will push the theoretical understanding of ensemble learning and give us insights into designing systems.},
+    arxiv={2205.12683}
 }
 @inproceedings{yamashita2022improving,
     author={Yamashita, Natsuo and Horiguchi, Shota and Homma, Takeshi},
     title={Improving the naturalness of simulated conversations for end-to-end neural diarization},
     booktitle={The Speaker and Language Recognition Workshop (Odyssey)},
-    year={2022}
+    year={2022},
+    abbr={Odyssey},
+    abstract={This paper investigates a method for simulating natural conversation in the model training of end-to-end neural diarization (EEND). Due to the lack of any annotated real conversational dataset, EEND is usually pretrained on a large-scale simulated conversational dataset first and then adapted to the target real dataset. Simulated datasets play an essential role in the training of EEND, but as yet there has been insufficient investigation into an optimal simulation method. We thus propose a method to simulate natural conversational speech. In contrast to conventional methods, which simply combine the speech of multiple speakers, our method takes turn-taking into account. We define four types of speaker transition and sequentially arrange them to simulate natural conversations. The dataset simulated using our method was found to be statistically similar to the real dataset in terms of the silence and overlap ratios. The experimental results on two-speaker diarization using the CALLHOME and CSJ datasets showed that the simulated dataset contributes to improving the performance of EEND.},
+    html={https://www.isca-speech.org/archive/odyssey_2022/yamashita22_odyssey.html},
+    arxiv={2204.11232}
 }
 @inproceedings{okamoto2022environmental,
     title={Environmental Sound Extraction Using Onomatopoeic Words},
     author={Okamoto, Yuki and Horiguchi, Shota and Yamamoto, Masaaki and Imoto, Keisuke and Kawaguchi, Yohei},
     booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
     year={2022},
-    pages={221--225}
+    pages={221--225},
+    abbr={ICASSP},
+    abstract={An onomatopoeic word, which is a character sequence that phonetically imitates a sound, is effective in expressing characteristics of sound such as duration, pitch, and timbre. We propose an environmental-sound-extraction method using onomatopoeic words to specify the target sound to be extracted. By this method, we estimate a time-frequency mask from an input mixture spectrogram and an onomatopoeic word using a U-Net architecture, then extract the corresponding target sound by masking the spectrogram. Experimental results indicate that the proposed method can extract only the target sound corresponding to the onomatopoeic word and performs better than conventional methods that use sound-event classes to specify the target sound.},
+    html={https://ieeexplore.ieee.org/document/9747835},
+    arxiv={2112.00209}
 }
 @inproceedings{xue2021online2,
     title={Online Streaming End-to-End Neural Diarization Handling Overlapping Speech and Flexible Numbers of Speakers},
     author={Xue, Yawen and Horiguchi, Shota and Fujita, Yusuke and Takashima, Yuki and Watanabe, Shinji and Garcia, Paola and Nagamatsu, Kenji},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     pages={3116--3120},
     year={2021},
+    abbr={INTERSPEECH},
+    abstract={We propose a streaming diarization method based on an end-to-end neural diarization (EEND) model, which handles flexible numbers of speakers and overlapping speech. In our previous study, the speaker-tracing buffer (STB) mechanism was proposed to achieve a chunk-wise streaming diarization using a pre-trained EEND model. STB traces the speaker information in previous chunks to map the speakers in a new chunk. However, it only worked with two-speaker recordings. In this paper, we propose an extended STB for flexible numbers of speakers, FLEX-STB. The proposed method uses a zero-padding followed by speaker-tracing, which alleviates the difference in the number of speakers between a buffer and a current chunk. We also examine buffer update strategies to select important frames for tracing multiple speakers. Experiments on CALLHOME and DIHARD II datasets show that the proposed method achieves comparable performance to the offline EEND method with 1-second latency. The results also show that our proposed method outperforms recently proposed chunk-wise diarization methods based on EEND (BW-EDA-EEND).},
+    html={https://www.isca-speech.org/archive/interspeech_2021/xue21d_interspeech.html},
+    arxiv={2101.08473}
 }
 @inproceedings{takashima2021semisupervised,
     title={Semi-Supervised Training with Pseudo-Labeling for End-to-End Neural Diarization},
     author={Takashima, Yuki and Fujita, Yusuke and Horiguchi, Shota and Watanabe, Shinji and Garcia, Paola and Nagamatsu, Kenji},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     pages={3096--3110},
     year={2021},
+    abbr={INTERSPEECH},
+    abstract={In this paper, we present a semi-supervised training technique using pseudo-labeling for end-to-end neural diarization (EEND). The EEND system has shown promising performance compared with traditional clustering-based methods, especially in the case of overlapping speech. However, to get a well-tuned model, EEND requires labeled data for all the joint speech activities of every speaker at each time frame in a recording. In this paper, we explore a pseudo-labeling approach that employs unlabeled data. First, we propose an iterative pseudo-label method for EEND, which trains the model using unlabeled data of a target condition. Then, we also propose a committee-based training method to improve the performance of EEND. To evaluate our proposed method, we conduct the experiments of model adaptation using labeled and unlabeled data. Experimental results on the CALLHOME dataset show that our proposed pseudo-label achieved a 37.4% relative diarization error rate reduction compared to a seed model. Moreover, we analyzed the results of semi-supervised adaptation with pseudo-labeling. We also show the effectiveness of our approach on the third DIHARD dataset.},
+    html={https://www.isca-speech.org/archive/interspeech_2021/takashima21_interspeech.html},
+    arxiv={2106.04764}
 }
 @inproceedings{xue2021online,
     title={Online End-to-End Neural Diarization with Speaker-Tracing Buffer},
@@ -118,6 +172,10 @@
     booktitle={IEEE Spoken Language Technology Workshop (SLT)},
     pages={841--848},
     year={2021},
+    abbr={SLT},
+    abstract={This paper proposes a novel online speaker diarization algorithm based on a fully supervised self-attention mechanism (SA-EEND). Online diarization inherently presents a speaker's permutation problem due to the possibility to assign speaker regions incorrectly across the recording. To circumvent this inconsistency, we proposed a speaker-tracing buffer mechanism that selects several input frames representing the speaker permutation information from previous chunks and stores them in a buffer. These buffered frames are stacked with the input frames in the current chunk and fed into a self-attention network. Our method ensures consistent diarization outputs across the buffer and the current chunk by checking the correlation between their corresponding outputs. Additionally, we trained SA-EEND with variable chunk-sizes to mitigate the mismatch between training and inference introduced by the speaker-tracing buffer mechanism. Experimental results, including online SA-EEND and variable chunk-size, achieved DERs of 12.54% for CALLHOME and 20.77% for CSJ with 1.4 s actual latency.},
+    html={https://ieeexplore.ieee.org/document/9383523},
+    arxiv={2006.02616}
 }
 @inproceedings{takashima2021endtoend,
     title={End-to-End Speaker Diarization Conditioned on Speech Activity and Overlap Detection},
@@ -125,13 +183,19 @@
     booktitle={IEEE Spoken Language Technology Workshop (SLT)},
     pages={849--856},
     year={2021},
+    abbr={SLT},
+    abstract={In this paper, we present a conditional multitask learning method for end-to-end neural speaker diarization (EEND). The EEND system has shown promising performance compared with traditional clustering-based methods, especially in the case of overlapping speech. In this paper, to further improve the performance of the EEND system, we propose a novel multitask learning framework that solves speaker diarization and a desired subtask while explicitly considering the task dependency. We optimize speaker diarization conditioned on speech activity and overlap detection that are subtasks of speaker diarization, based on the probabilistic chain rule. Experimental results show that our proposed method can leverage a subtask to effectively model speaker diarization, and outperforms conventional EEND systems in terms of diarization error rate.},
+    html={https://ieeexplore.ieee.org/document/9383555}
 }
 @inproceedings{ito2020anticipating,
     title={Anticipating the Start of User Interaction for Service Robot in the Wild},
     author={Ito, Koichiro and Kong, Quan and Horiguchi, Shota and Sumiyoshi, Takashi and Nagamatsu, Kenji},
     booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
     year={2020},
-    pages={9687--9693}
+    pages={9687--9693},
+    abbr={ICRA},
+    abstract={A service robot is expected to provide proactive service for visitors who require its help. In contrast to passive service, e.g., providing service only after being spoken to, proactive service initiates an interaction at an early stage, e.g., talking to potential visitors who need the robot’s help in advance. This paper addresses how to anticipate the start of user interaction. We propose an approach using only a single RGB camera that anticipates whether a visitor will come to the robot for interaction or just pass it by. In the proposed approach, we (i) utilize the visitor’s pose information from captured images incorporating facial information, (ii) train a CNN-LSTM–based model in an end-to-end manner with an exponential loss for early anticipation, and (iii) during the training, the network branch for facial keypoints acquired as the part of the human pose information is taught to mimic the branch trained with the face image from a specialized face detector with a human verification. By virtue of (iii), at the inference, we can run our model in an embedded system processing only the pose information without an additional face detector and typical accuracy drop.We evaluated the proposed approach on our collected real world data with a real service robot and publicly available JPL interaction dataset and found that it achieved accurate anticipation performance.},
+    html={https://ieeexplore.ieee.org/document/9196548}
 }
 @inproceedings{kanda2019simultaneous,
     title={Simultaneous Speech Recognition and Speaker Diarization for Monaural Dialogue Recordings with Target-Speaker Acoustic Models},
@@ -139,6 +203,10 @@
     booktitle={IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
     pages={31--38},
     year={2019},
+    abbr={ASRU},
+    abstract={This paper investigates the use of target-speaker automatic speech recognition (TS-ASR) for simultaneous speech recognition and speaker diarization of single-channel dialogue recordings. TS-ASR is a technique to automatically extract and recognize only the speech of a target speaker given a short sample utterance of that speaker. One obvious drawback of TS-ASR is that it cannot be used when the speakers in the recordings are unknown because it requires a sample of the target speakers in advance of decoding. To remove this limitation, we propose an iterative method, in which (i) the estimation of speaker embeddings and (ii) TS-ASR based on the estimated speaker embeddings are alternately executed. We evaluated the proposed method by using very challenging dialogue recordings in which the speaker overlap ratio was over 20%. We confirmed that the proposed method significantly reduced both the word error rate (WER) and diarization error rate (DER). Our proposed method combined with i-vector speaker embeddings ultimately achieved a WER that differed by only 2.1 % from that of TS-ASR given oracle speaker embeddings. Furthermore, our method can solve speaker diarization simultaneously as a by-product and achieved better DER than that of the conventional clustering-based speaker diarization method based on i-vector.},
+    html={https://ieeexplore.ieee.org/document/9004009},
+    arxiv={1909.08103}
 }
 @inproceedings{fujita2019endtoend,
     title={End-to-End Neural Speaker Diarization with Self-Attention},
@@ -146,35 +214,53 @@
     booktitle={IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
     pages={296--303},
     year={2019},
+    abbr={ASRU},
+    abstract={Speaker diarization has been mainly developed based on the clustering of speaker embeddings. However, the clustering-based approach has two major problems; i.e., (i) it is not optimized to minimize diarization errors directly, and (ii) it cannot handle speaker overlaps correctly. To solve these problems, the End-to-End Neural Diarization (EEND), in which a bidirectional long short-term memory (BLSTM) network directly outputs speaker diarization results given a multi-talker recording, was recently proposed. In this study, we enhance EEND by introducing self-attention blocks instead of BLSTM blocks. In contrast to BLSTM, which is conditioned only on its previous and next hidden states, self-attention is directly conditioned on all the other frames, making it much suitable for dealing with the speaker diarization problem. We evaluated our proposed method on simulated mixtures, real telephone calls, and real dialogue recordings. The experimental results revealed that the self-attention was the key to achieving good performance and that our proposed method performed significantly better than the conventional BLSTM-based method. Our method was even better than that of the state-of-the-art x-vector clustering-based method. Finally, by visualizing the latent representation, we show that the self-attention can capture global speaker characteristics in addition to local speech activity dynamics. Our source code is available online at https://github.com/hitachi-speech/EEND.},
+    html={https://ieeexplore.ieee.org/document/9003959},
+    arxiv={1909.06247}
 }
 @inproceedings{kanda2019auxiliary,
     title={Auxiliary Interference Speaker Loss for Target-Speaker Speech Recognition},
     author={Kanda, Naoyuki and Horiguchi, Shota and Takashima, Ryoichi and Fujita, Yusuke and Nagamatsu, Kenji and Watanabe, Shinji},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     year={2019},
     pages={236--240},
+    abbr={INTERSPEECH},
+    abstract={In this paper, we propose a novel auxiliary loss function for target-speaker automatic speech recognition (ASR). Our method automatically extracts and transcribes target speaker’s utterances from a monaural mixture of multiple speakers speech given a short sample of the target speaker. The proposed auxiliary loss function attempts to additionally maximize interference speaker ASR accuracy during training. This will regularize the network to achieve a better representation for speaker separation, thus achieving better accuracy on the target-speaker ASR. We evaluated our proposed method using two-speaker-mixed speech in various signal-to-interference-ratio conditions. We first built a strong target-speaker ASR baseline based on the state-of-the-art lattice-free maximum mutual information. This baseline achieved a word error rate (WER) of 18.06% on the test set while a normal ASR trained with clean data produced a completely corrupted result (WER of 84.71%). Then, our proposed loss further reduced the WER by 6.6% relative to this strong baseline, achieving a WER of 16.87%. In addition to the accuracy improvement, we also showed that the auxiliary output branch for the proposed loss can even be used for a secondary ASR for interference speakers' speech.},
+    html={https://www.isca-speech.org/archive/interspeech_2019/kanda19_interspeech.html},
+    arxiv={1906.10876}
 }
 @inproceedings{kanda2019guided,
     title={Guided Source Separation Meets a Strong {ASR} Backend: {Hitachi/Paderborn University} Joint Investigation for Dinner Party Scenario},
     author={Kanda, Naoyuki and Boeddeker, Christoph and Heitkaemper, Jens and Fujita, Yusuke and Horiguchi, Shota and Nagamatsu, Kenji and Haeb-Umbach, Reinhold},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     year={2019},
     pages={1248--1252},
+    abbr={INTERSPEECH},
+    abstract={In this paper, we present Hitachi and Paderborn University’s joint effort for automatic speech recognition (ASR) in a dinner party scenario. The main challenges of ASR systems for dinner party recordings obtained by multiple microphone arrays are (1) heavy speech overlaps, (2) severe noise and reverberation, (3) very natural conversational content, and possibly (4) insufficient training data. As an example of a dinner party scenario, we have chosen the data presented during the CHiME-5 speech recognition challenge, where the baseline ASR had a 73.3% word error rate (WER), and even the best performing system at the CHiME-5 challenge had a 46.1% WER. We extensively investigated a combination of the guided source separation-based speech enhancement technique and an already proposed strong ASR backend and found that a tight combination of these techniques provided substantial accuracy improvements. Our final system achieved WERs of 39.94% and 41.64% for the development and evaluation data, respectively, both of which are the best published results for the dataset. We also investigated with additional training data on the official small data in the CHiME-5 corpus to assess the intrinsic difficulty of this ASR task.},
+    html={https://www.isca-speech.org/archive/interspeech_2019/kanda19b_interspeech.html},
+    arxiv={1905.12230}
 }
 @inproceedings{fujita2019endtoend2,
     title={End-to-End Neural Speaker Diarization with Permutation-Free Objectives},
     author={Fujita, Yusuke and Kanda, Naoyuki and Horiguchi, Shota and Nagamatsu, Kenji and Watanabe, Shinji},
-    booktitle={INTERSPEECH},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     year={2019},
     pages={4300--4304},
+    abbr={INTERSPEECH},
+    abstract={In this paper, we propose a novel end-to-end neural-network-based speaker diarization method. Unlike most existing methods, our proposed method does not have separate modules for extraction and clustering of speaker representations. Instead, our model has a single neural network that directly outputs speaker diarization results. To realize such a model, we formulate the speaker diarization problem as a multi-label classification problem, and introduces a permutation-free objective function to directly minimize diarization errors without being suffered from the speaker-label permutation problem. Besides its end-to-end simplicity, the proposed method also benefits from being able to explicitly handle overlapping speech during training and inference. Because of the benefit, our model can be easily trained/adapted with real-recorded multi-speaker conversations just by feeding the corresponding multi-speaker segment labels. We evaluated the proposed method on simulated speech mixtures. The proposed method achieved diarization error rate of 12.28%, while a conventional clustering-based system produced diarization error rate of 28.77%. Furthermore, the domain adaptation with real-recorded speech provided 25.6% relative improvement on the CALLHOME dataset.},
+    html={https://www.isca-speech.org/archive/interspeech_2019/fujita19_interspeech.html},
+    arxiv={1909.05952}
 }
-
 @inproceedings{kanda2019acoustic,
     title={Acoustic Modeling for Distant Multi-Talker Speech Recognition with Single- and Multi-Channel Branches},
     author={Kanda, Naoyuki and Fujita, Yusuke and Horiguchi, Shota and Ikeshita, Rintaro and Nagamatsu, Kenji and Watanabe, Shinji},
     booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
     year={2019},
     pages={6630--6634},
+    abbr={ICASSP},
+    abstract={This paper presents a novel heterogeneous-input multi-channel acoustic model (AM) that has both single-channel and multi-channel input branches. In our proposed training pipeline, a single-channel AM is trained first, then a multi-channel AM is trained starting from the single-channel AM with a randomly initialized multi-channel input branch. Our model uniquely uses the power of a complemen-tal speech enhancement (SE) module while exploiting the power of jointly trained AM and SE architecture. Our method was the foundation for the Hitachi/JHU CHiME-5 system that achieved the second-best result in the CHiME-5 competition, and this paper details various investigation results that we were not able to present during the competition period. We also evaluated and reconfirmed our method's effectiveness with the AMI Meeting Corpus. Our AM achieved a 30.12% word error rate (WER) for the development set and a 32.33% WER for the evaluation set for the AMI Corpus, both of which are the best results ever reported to the best of our knowledge.},
+    html={https://ieeexplore.ieee.org/document/8682273}
 }
 @inproceedings{tamura2019omnidirectional,
     title={Omnidirectional Pedestrian Detection by Rotation Invariant Training},
@@ -182,12 +268,16 @@
     author={Tamura, Masato and Horiguchi, Shota and Murakami, Tomokazu},
     pages={1989--1998},
     year={2019},
+    abbr={WACV},
+    abstract={Recently much progress has been made in pedestrian detection by utilizing the learning ability of convolutional neural networks (CNNs). However, due to the lack of omnidirectional images to train CNNs, few CNN-based detectors have been proposed for omnidirectional pedestrian detection. One significant difference between omnidirectional images and perspective images is that the appearance of pedestrians is rotated in omnidirectional images. A previous method has dealt with this by transforming omnidirectional images into perspective images in the test phase. However, this method has significant drawbacks, namely, the computational cost and the performance degradation caused by the transformation. To address this issue, we propose a rotation invariant training method, which only uses randomly rotated perspective images without any additional annotation. By this method, existing large-scale datasets can be utilized. In test phase, omnidirectional images can be used without the transformation. To group predicted bounding boxes, we also develop a bounding box refinement, which works better for our detector than non-maximum suppression. The proposed detector achieved a state-of-the-art performance on four public benchmarks.},
+    html={https://ieeexplore.ieee.org/document/8658933}
 }
-
 @inproceedings{amano2016food,
     title={Food Search Based on User Feedback to Assist Image-Based Food Recording Systems},
-    author={Amano, Sosuke and Horiguchi, Shota and Aizawa, Kiyoharu and Maeda, Kazuki and Kubota, Masanoti and Ogawa, Makoto},
+    author={Amano, Sosuke and Horiguchi, Shota and Aizawa, Kiyoharu and Maeda, Kazuki and Kubota, Masanori and Ogawa, Makoto},
     booktitle={International Workshop On Multimedia Assisted Dietary Management (MADiMa)},
     pages={71--75},
-    year={2016}
+    year={2016},
+    abstract={Food diaries or diet journals are thought to be effective for improving the dietary lives of users. One important challenge in this field involves assisting users in recording their daily food intake. In recent years, food image recognition has attracted a considerable amount of research interest as a new technology to help record users 'food intake. However, since there are so many types of food, and it is unrealistic to expect a system to recognize all foods. In this paper, we propose an optimal combination of image recognition and interactive search in order to record users 'intake of food. The image recognition generates a list of candidate names for a given food picture. The user chooses the closest name to the meal, which triggers an associative food search based on food contents, such as ingredients. We show the proposed system is efficient to assist users maintain food journals.},
+    html={https://dl.acm.org/doi/10.1145/2986035.2986037}
 }
