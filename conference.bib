@@ -62,7 +62,8 @@
     abbr={INTERSPEECH},
     abstract={End-to-end speaker diarization for an unknown number of speakers is addressed in this paper. Recently proposed end-to-end speaker diarization outperformed conventional clustering-based speaker diarization, but it has one drawback: it is less flexible in terms of the number of speakers. This paper proposes a method for encoder-decoder based attractor calculation (EDA), which first generates a flexible number of attractors from a speech embedding sequence. Then, the generated multiple attractors are multiplied by the speech embedding sequence to produce the same number of speaker activities. The speech embedding sequence is extracted using the conventional self-attentive end-to-end neural speaker diarization (SA-EEND) network. In a two-speaker condition, our method achieved a 2.69% diarization error rate (DER) on simulated mixtures and a 8.07% DER on the two-speaker subset of CALLHOME, while vanilla SA-EEND attained 4.56% and 9.54%, respectively. In unknown numbers of speakers conditions, our method attained a 15.29% DER on CALLHOME, while the x-vector-based clustering method achieved a 19.43% DER.},
     html={https://www.isca-speech.org/archive/interspeech_2020/horiguchi20_interspeech.html},
-    arxiv={2005.09921}
+    arxiv={2005.09921},
+    code={https://github.com/hitachi-speech/EEND}
 }
 @inproceedings{horiguchi2020utterancewise,
     title={Utterance-Wise Meeting Transcription System Using Asynchronous Distributed Microphones},
@@ -140,6 +141,7 @@
     booktitle={The Speaker and Language Recognition Workshop (Odyssey)},
     year={2022},
     month={jun},
+    pages={133--140},
     abbr={Odyssey},
     abstract={This paper investigates a method for simulating natural conversation in the model training of end-to-end neural diarization (EEND). Due to the lack of any annotated real conversational dataset, EEND is usually pretrained on a large-scale simulated conversational dataset first and then adapted to the target real dataset. Simulated datasets play an essential role in the training of EEND, but as yet there has been insufficient investigation into an optimal simulation method. We thus propose a method to simulate natural conversational speech. In contrast to conventional methods, which simply combine the speech of multiple speakers, our method takes turn-taking into account. We define four types of speaker transition and sequentially arrange them to simulate natural conversations. The dataset simulated using our method was found to be statistically similar to the real dataset in terms of the silence and overlap ratios. The experimental results on two-speaker diarization using the CALLHOME and CSJ datasets showed that the simulated dataset contributes to improving the performance of EEND.},
     html={https://www.isca-speech.org/archive/odyssey_2022/yamashita22_odyssey.html},
@@ -155,7 +157,8 @@
     abbr={ICASSP},
     abstract={An onomatopoeic word, which is a character sequence that phonetically imitates a sound, is effective in expressing characteristics of sound such as duration, pitch, and timbre. We propose an environmental-sound-extraction method using onomatopoeic words to specify the target sound to be extracted. By this method, we estimate a time-frequency mask from an input mixture spectrogram and an onomatopoeic word using a U-Net architecture, then extract the corresponding target sound by masking the spectrogram. Experimental results indicate that the proposed method can extract only the target sound corresponding to the onomatopoeic word and performs better than conventional methods that use sound-event classes to specify the target sound.},
     html={https://ieeexplore.ieee.org/document/9747835},
-    arxiv={2112.00209}
+    arxiv={2112.00209},
+    website={https://y-okamoto1221.github.io/Sound_Extraction_Onomatopoeia/}
 }
 @inproceedings{xue2021online2,
     title={Online Streaming End-to-End Neural Diarization Handling Overlapping Speech and Flexible Numbers of Speakers},
@@ -237,7 +240,8 @@
     abbr={ASRU},
     abstract={Speaker diarization has been mainly developed based on the clustering of speaker embeddings. However, the clustering-based approach has two major problems; i.e., (i) it is not optimized to minimize diarization errors directly, and (ii) it cannot handle speaker overlaps correctly. To solve these problems, the End-to-End Neural Diarization (EEND), in which a bidirectional long short-term memory (BLSTM) network directly outputs speaker diarization results given a multi-talker recording, was recently proposed. In this study, we enhance EEND by introducing self-attention blocks instead of BLSTM blocks. In contrast to BLSTM, which is conditioned only on its previous and next hidden states, self-attention is directly conditioned on all the other frames, making it much suitable for dealing with the speaker diarization problem. We evaluated our proposed method on simulated mixtures, real telephone calls, and real dialogue recordings. The experimental results revealed that the self-attention was the key to achieving good performance and that our proposed method performed significantly better than the conventional BLSTM-based method. Our method was even better than that of the state-of-the-art x-vector clustering-based method. Finally, by visualizing the latent representation, we show that the self-attention can capture global speaker characteristics in addition to local speech activity dynamics. Our source code is available online at https://github.com/hitachi-speech/EEND.},
     html={https://ieeexplore.ieee.org/document/9003959},
-    arxiv={1909.06247}
+    arxiv={1909.06247},
+    code={https://github.com/hitachi-speech/EEND}
 }
 @inproceedings{kanda2019auxiliary,
     title={Auxiliary Interference Speaker Loss for Target-Speaker Speech Recognition},
@@ -273,7 +277,8 @@
     abbr={INTERSPEECH},
     abstract={In this paper, we propose a novel end-to-end neural-network-based speaker diarization method. Unlike most existing methods, our proposed method does not have separate modules for extraction and clustering of speaker representations. Instead, our model has a single neural network that directly outputs speaker diarization results. To realize such a model, we formulate the speaker diarization problem as a multi-label classification problem, and introduces a permutation-free objective function to directly minimize diarization errors without being suffered from the speaker-label permutation problem. Besides its end-to-end simplicity, the proposed method also benefits from being able to explicitly handle overlapping speech during training and inference. Because of the benefit, our model can be easily trained/adapted with real-recorded multi-speaker conversations just by feeding the corresponding multi-speaker segment labels. We evaluated the proposed method on simulated speech mixtures. The proposed method achieved diarization error rate of 12.28%, while a conventional clustering-based system produced diarization error rate of 28.77%. Furthermore, the domain adaptation with real-recorded speech provided 25.6% relative improvement on the CALLHOME dataset.},
     html={https://www.isca-speech.org/archive/interspeech_2019/fujita19_interspeech.html},
-    arxiv={1909.05952}
+    arxiv={1909.05952},
+    code={https://github.com/hitachi-speech/EEND}
 }
 @inproceedings{kanda2019acoustic,
     title={Acoustic Modeling for Distant Multi-Talker Speech Recognition with Single- and Multi-Channel Branches},
@@ -295,7 +300,8 @@
     month={jan},
     abbr={WACV},
     abstract={Recently much progress has been made in pedestrian detection by utilizing the learning ability of convolutional neural networks (CNNs). However, due to the lack of omnidirectional images to train CNNs, few CNN-based detectors have been proposed for omnidirectional pedestrian detection. One significant difference between omnidirectional images and perspective images is that the appearance of pedestrians is rotated in omnidirectional images. A previous method has dealt with this by transforming omnidirectional images into perspective images in the test phase. However, this method has significant drawbacks, namely, the computational cost and the performance degradation caused by the transformation. To address this issue, we propose a rotation invariant training method, which only uses randomly rotated perspective images without any additional annotation. By this method, existing large-scale datasets can be utilized. In test phase, omnidirectional images can be used without the transformation. To group predicted bounding boxes, we also develop a bounding box refinement, which works better for our detector than non-maximum suppression. The proposed detector achieved a state-of-the-art performance on four public benchmarks.},
-    html={https://ieeexplore.ieee.org/document/8658933}
+    html={https://ieeexplore.ieee.org/document/8658933},
+    supp={https://github.com/hitachi-rd-cv/omnidet-rotinv}
 }
 @inproceedings{amano2016food,
     title={Food Search Based on User Feedback to Assist Image-Based Food Recording Systems},
