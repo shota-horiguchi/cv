@@ -155,8 +155,27 @@
 }
 
 % Co-author
+@inproceedings{ando2024factor,
+    title={Factor-Conditioned Speaking-Style Captioning},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    author={Ando, Atsushi and Moriya, Takafumi and Horiguchi, Shota and Masumura, Ryo},
+    year={2024},
+    month=sep,
+    abbr={INTERSPEECH},
+    abstract={This paper presents a novel speaking-style captioning method that generates diverse descriptions while accurately predicting speaking-style information. Conventional learning criteria directly use original captions that contain not only speaking-style factor terms but also syntax words, which disturbs learning speaking-style information. To solve this problem, we introduce factor-conditioned captioning (FCC), which first outputs a phrase representing speaking-style factors (e.g., gender, pitch, etc.), and then generates a caption to ensure the model explicitly learns speaking-style factors. We also propose greedy-then-sampling (GtS) decoding, which first predicts speaking-style factors deterministically to guarantee semantic accuracy, and then generates a caption based on factor-conditioned sampling to ensure diversity. Experiments show that FCC outperforms the original caption-based training, and with GtS, it generates more diverse captions while keeping style prediction performance.},
+    arxiv={2406.18910}
+}
+@inproceedings{sato2024speakerbeamss,
+    title={{SpeakerBeam-SS}: Real-Time Target Speaker Extraction with Lightweight {Conv-TasNet} and State Space Modeling},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    author={Sato, Hiroshi and Moriya, Takafumi and Mimura, Masato and Horiguchi, Shota and Ochiai, Tsubasa and Ashihara, Takanori and Ando, Atsushi and Shinayama, Kentaro and Delcroix, Marc},
+    year={2024},
+    month=sep,
+    abbr={INTERSPEECH},
+    abstract={Real-time target speaker extraction (TSE) is intended to extract the desired speaker's voice from the observed mixture of multiple speakers in a streaming manner. Implementing real-time TSE is challenging as the computational complexity must be reduced to provide real-time operation. This work introduces to Conv-TasNet-based TSE a new architecture based on state space modeling (SSM) that has been shown to model long-term dependency effectively. Owing to SSM, fewer dilated convolutional layers are required to capture temporal dependency in Conv-TasNet, resulting in the reduction of model complexity. We also enlarge the window length and shift of the convolutional (TasNet) frontend encoder to reduce the computational cost further; the performance decline is compensated by over-parameterization of the frontend encoder. The proposed method reduces the real-time factor by 78\% from the conventional causal Conv-TasNet-based TSE while matching its performance.}
+}
 @inproceedings{ho2023synthetic,
-    title={Synthetic Data Augmentation for ASR with Domain Filtering},
+    title={Synthetic Data Augmentation for {ASR} with Domain Filtering},
     booktitle={Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
     author={Ho, Tuan Vu and Horiguchi, Shota and Watanabe, Shinji and Garcia, Paola and Sumiyoshi, Takashi},
     year={2023},
