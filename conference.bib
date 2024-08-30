@@ -1,4 +1,14 @@
 % First author
+@inproceeedings{horiguchi2024recursive,
+    title={Recursive Attentive Pooling for Extracting Speaker Embeddings from Multi-Speaker Recogdings},
+    author={Horiguchi, Shota and Moriya, Takafumi and Ashihara, Takanori and Sato, Hiroshi and Tawara, Naohiro and Delcroix, Marc},
+    booktitle={IEEE Spoken Language Technology Workshop (SLT)},
+    year={2024},
+    month=dec,
+    abbr={SLT},
+    abstract={This paper proposes a method for extracting speaker embedding for each speaker from a variable-length recording containing multiple speakers. Speaker embeddings are crucial not only for speaker recognition but also for various multi-speaker speech applications such as speaker diarization and target-speaker speech processing. Despite the challenges of obtaining a single speaker's speech without pre-registration in multi-speaker scenarios, most studies on speaker embedding extraction focus on extracting embeddings only from single-speaker recordings. Some methods have been proposed for extracting speaker embeddings directly from multi-speaker recordings, but they typically require preparing a model for each possible number of speakers or involve complicated training procedures. The proposed method computes the embeddings of multiple speakers by focusing on different parts of the frame-wise embeddings extracted from the input multi-speaker audio. This is achieved by recursively computing attention weights for pooling the frame-wise embeddings. Additionally, we propose using the calculated attention weights to estimate the number of speakers in the recording, which allows the same model to be applied to various numbers of speakers. Experimental evaluations demonstrate the effectiveness of the proposed method in speaker verification and diarization tasks.},
+    keywords={first}
+}
 @inproceedings{horiguchi2024streaming,
     title={Streaming Active Learning for Regression Problems Using Regression via Classification},
     booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
@@ -155,6 +165,15 @@
 }
 
 % Co-author
+@inproceeedings{ashihara2024investigation,
+    title={Investigation of Speaker Representation for Target-Speaker Speech Processing},
+    author={Ashihara, Takanori and Moriya, Takafumi and Horiguchi, Shota and Peng, Junyi and Ochiai, Tsubasa and Delcroix, Marc and Matsuura, Kohei and Sato, Hiroshi},
+    booktitle={IEEE Spoken Language Technology Workshop (SLT)},
+    year={2024},
+    month=dec,
+    abbr={SLT},
+    abstract={Target-speaker speech processing (TS) tasks, such as target-speaker automatic speech recognition (TS-ASR), target speech extraction (TSE), and personal voice activity detection (p-VAD), are important for extracting information about a desired speaker's speech even when it is corrupted by interference speakers. While most studies have focused on the training schemes or system architectures for each specific task, the auxiliary network for embedding target speaker cues has not been investigated comprehensively in a unified cross-task evaluation. Therefore, this paper attempts to address a fundamental question: what is the preferred speaker embedding for TS tasks? To this end, for the TS-ASR, TSE, and p-VAD tasks, we compare pre-trained speaker encoders (i.e., self-supervised or speaker recognition models) that compute speaker embeddings from pre-recorded enrollment speech of the target speaker with ideal speaker embeddings derived directly from target speaker identity in the form of a one-hot vector. To further understand the property of ideal speaker embedding, we optimize it using a gradient-based approach to improve performance on the TS task. Our analysis unveils that 1) speaker verification performance is somewhat unrelated to TS task performances, 2) the one-hot vector outperforms enrollment-based ones, and 3) the optimal embedding depends on the input mixture.},
+}
 @inproceedings{ando2024factor,
     title={Factor-Conditioned Speaking-Style Captioning},
     booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
