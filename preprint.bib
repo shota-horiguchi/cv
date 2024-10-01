@@ -1,3 +1,13 @@
+@misc{moriya2024alignment,
+    title={Aligmnent-Free Training for Transducer-Based Multi-Talker {ASR}},
+    author={Moriya, Takafumi and Horiguchi, Shota and Delcroix, Marc and Masumura, Ryo and Ashihara, Takanori and Sato, Hiroshi and Matsuura, Kohei and Mimura Masato},
+    year={2024},
+    month=sep,
+    howpublished={arxiv:2409.20301},
+    abbr={Preprint},
+    abstract={Extending the RNN Transducer (RNNT) to recognize multi-talker speech is essential for wider automatic speech recognition (ASR) applications. Multi-talker RNNT (MT-RNNT) aims to achieve recognition without relying on costly front-end source separation. MT-RNNT is conventionally implemented using architectures with multiple encoders or decoders, or by serializing all speakers' transcriptions into a single output stream. The first approach is computationally expensive, particularly due to the need for multiple encoder processing. In contrast, the second approach involves a complex label generation process, requiring accurate timestamps of all words spoken by all speakers in the mixture, obtained from an external ASR system. In this paper, we propose a novel alignment-free training scheme for the MT-RNNT (MT-RNNT-AFT) that adopts the standard RNNT architecture. The target labels are created by appending a prompt token corresponding to each speaker at the beginning of the transcription, reflecting the order of each speaker's appearance in the mixtures. Thus, MT-RNNT-AFT can be trained without relying on accurate alignments, and it can recognize all speakers' speech with just one round of encoder processing. Experiments show that MT-RNNT-AFT achieves performance comparable to that of the state-of-the-art alternatives, while greatly simplifying the training process.},
+    arxiv={2409.20301}
+}
 @misc{namba2024thresholding,
     title={Thresholding Data Shapley for Data Cleansing Using Multi-Armed Bandits},
     author={Namba, Hiroyuki, and Horiguchi, Shota, and Hamamoto, Masaki and Egi, Masashi},
