@@ -1,4 +1,15 @@
 % First author
+@inproceedings{horiguchi2025guided,
+    title={Guided Speaker Embedding},
+    author={Horiguchi, Shota and Moriya, Takafumi and Ando, Atsushi and Ashihara, Takanori and Sato, Hiroshi and Tawara, Naohiro and Delcroix, Marc},
+    booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year={2025},
+    month=apr,
+    abbr={ICASSP},
+    keywords={first},
+    abstract={This paper proposes a guided speaker embedding extraction system, which extracts speaker embeddings of the target speaker using speech activities of target and interference speakers as clues. Several methods for long-form overlapped multi-speaker audio processing are typically two-staged: i) segment-level processing and ii) inter-segment speaker matching. Speaker embeddings are often used for the latter purpose. Typical speaker embedding extraction approaches only use single-speaker intervals to avoid corrupting the embeddings with speech from interference speakers. However, this often makes speaker embeddings impossible to extract because sufficiently long non-overlapping intervals are not always available. In this paper, we propose using speaker activities as clues to extract the embedding of the speaker-of-interest directly from overlapping speech. Specifically, we concatenate the activity of target and non-target speakers to acoustic features before being fed to the model. We also condition the attention weights used for pooling so that the attention weights of the intervals in which the target speaker is inactive are zero. The effectiveness of the proposed method is demonstrated in speaker verification and speaker diarization.},
+    arxiv={2410.12182}
+}
 @inproceedings{horiguchi2024recursive,
     title={Recursive Attentive Pooling for Extracting Speaker Embeddings from Multi-Speaker Recordings},
     author={Horiguchi, Shota and Ando, Atsushi and Moriya, Takafumi and Ashihara, Takanori and Sato, Hiroshi and Tawara, Naohiro and Delcroix, Marc},
@@ -168,6 +179,36 @@
 }
 
 % Co-author
+@inproceedings{tawara2025multi,
+    title={Multi-channel Speaker Counting for {EEND-VC}-based Speaker Diarization on Multi-domain Conversation},
+    author={Tawara, Naohiro and Ando, Atsushi and Horiguchi, Shota and Delcroix, Marc},
+    booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year={2025},
+    month=apr,
+    abbr={ICASSP},
+    abstract={This paper proposes a speaker counting scheme using multi-channel microphones for end-to-end neural diarization with a vector clustering (EEND-VC) speaker diarization pipeline. The EEND-VC-based system estimates the number of speakers by clustering speaker embeddings from small chunks. However, conventional speaker counting struggles in short sessions with limited available embeddings. We address this issue by leveraging the most possible embeddings from multi-channel signals to increase the number of embeddings. One challenge in using embeddings across channels is the biases caused by channel differences. To mitigate this issue, we extend the EEND-VC pipeline with two modifications: (1) applying speech enhancement before extracting speaker embedding to capture the speaker characteristics even from short chunks and (2) grouping microphones based on inter-channel correlation to perform speaker counting within each group and then aggregating these channel-wise results. The proposed scheme was integrated into our CHiME-8 diarization pipeline, achieving superior speaker counting accuracy compared to the CHiME-8 baseline, with 54.2\% and 61.4\% improvements in the development and evaluation sets, respectively.},
+}
+@inproceedings{plaquet2025mamba,
+    title={Mamba-based Segmentation Model for Speaker Diarization},
+    author={Plaquet, Alexis and Tawara, Naohiro and Delcroix, Marc and Horiguchi, Shota and Ando, Atsushi and Araki, Shoko},
+    booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year={2025},
+    month=apr,
+    abbr={ICASSP},
+    abstract={Mamba is a newly proposed architecture which behaves like a recurrent neural network (RNN) with attention-like capabilities. These properties are promising for speaker diarization, as attention-based models have unsuitable memory requirements for long-form audio, and traditional RNN capabilities are too limited. In this paper, we propose to assess the potential of Mamba for diarization by comparing the state-of-the-art neural segmentation of the pyannote pipeline with our proposed Mamba-based variant. Mamba's stronger processing capabilities allow usage of longer local windows, which significantly improve diarization quality by making the speaker embedding extraction more reliable. We find Mamba to be a superior alternative to both traditional RNN and the tested attention-based model. Our proposed Mamba-based system achieves state-of-the-art performance on three widely used diarization datasets.},
+    arxiv={2410.06459},
+    code={https://github.com/nttcslab-sp/mamba-diarization}
+}
+@inproceedings{moriya2025alignment,
+    title={Alignment-Free Training for Transducer-Based Multi-Talker {ASR}},
+    author={Moriya, Takafumi and Horiguchi, Shota and Delcroix, Marc and Masumura, Ryo and Ashihara, Takanori and Sato, Hiroshi and Matsuura, Kohei and Mimura, Masato},
+    booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year={2025},
+    month=apr,
+    abbr={ICASSP},
+    abstract={Extending the RNN Transducer (RNNT) to recognize multi-talker speech is essential for wider automatic speech recognition (ASR) applications. Multi-talker RNNT (MT-RNNT) aims to achieve recognition without relying on costly front-end source separation. MT-RNNT is conventionally implemented using architectures with multiple encoders or decoders, or by serializing all speakers' transcriptions into a single output stream. The first approach is computationally expensive, particularly due to the need for multiple encoder processing. In contrast, the second approach involves a complex label generation process, requiring accurate timestamps of all words spoken by all speakers in the mixture, obtained from an external ASR system. In this paper, we propose a novel alignment-free training scheme for the MT-RNNT (MT-RNNT-AFT) that adopts the standard RNNT architecture. The target labels are created by appending a prompt token corresponding to each speaker at the beginning of the transcription, reflecting the order of each speaker's appearance in the mixtures. Thus, MT-RNNT-AFT can be trained without relying on accurate alignments, and it can recognize all speakers' speech with just one round of encoder processing. Experiments show that MT-RNNT-AFT achieves performance comparable to that of the state-of-the-art alternatives, while greatly simplifying the training process.},
+    arxiv={2409.20301}
+}
 @inproceedings{ashihara2024investigation,
     title={Investigation of Speaker Representation for Target-Speaker Speech Processing},
     author={Ashihara, Takanori and Moriya, Takafumi and Horiguchi, Shota and Peng, Junyi and Ochiai, Tsubasa and Delcroix, Marc and Matsuura, Kohei and Sato, Hiroshi},

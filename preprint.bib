@@ -1,35 +1,3 @@
-@misc{plaquet2024mamba,
-    title={Mamba-based Segmentation Model for Speaker Diarization},
-    author={Plaquet, Alexis and Tawara, Naohiro and Delcroix, Marc and Horiguchi, Shota and Ando, Atsushi and Araki, Shoko},
-    year={2024},
-    month=oct,
-    howpublished={arxiv:2410.06459},
-    abbr={Preprint},
-    abstract={Mamba is a newly proposed architecture which behaves like a recurrent neural network (RNN) with attention-like capabilities. These properties are promising for speaker diarization, as attention-based models have unsuitable memory requirements for long-form audio, and traditional RNN capabilities are too limited. In this paper, we propose to assess the potential of Mamba for diarization by comparing the state-of-the-art neural segmentation of the pyannote pipeline with our proposed Mamba-based variant. Mamba's stronger processing capabilities allow usage of longer local windows, which significantly improve diarization quality by making the speaker embedding extraction more reliable. We find Mamba to be a superior alternative to both traditional RNN and the tested attention-based model. Our proposed Mamba-based system achieves state-of-the-art performance on three widely used diarization datasets.},
-    arxiv={2410.06459},
-    code={https://github.com/nttcslab-sp/mamba-diarization}
-}
-@misc{horiguchi2024guided,
-    title={Guided Speaker Embedding},
-    author={Horiguchi, Shota and Moriya, Takafumi and Ando, Atsushi and Ashihara, Takanori and Sato, Hiroshi and Tawara, Naohiro and Delcroix, Marc},
-    year={2024},
-    month=oct,
-    howpublished={arxiv:2410.12182},
-    abbr={Preprint},
-    keywords={first},
-    abstract={This paper proposes a guided speaker embedding extraction system, which extracts speaker embeddings of the target speaker using speech activities of target and interference speakers as clues. Several methods for long-form overlapped multi-speaker audio processing are typically two-staged: i) segment-level processing and ii) inter-segment speaker matching. Speaker embeddings are often used for the latter purpose. Typical speaker embedding extraction approaches only use single-speaker intervals to avoid corrupting the embeddings with speech from interference speakers. However, this often makes speaker embeddings impossible to extract because sufficiently long non-overlapping intervals are not always available. In this paper, we propose using speaker activities as clues to extract the embedding of the speaker-of-interest directly from overlapping speech. Specifically, we concatenate the activity of target and non-target speakers to acoustic features before being fed to the model. We also condition the attention weights used for pooling so that the attention weights of the intervals in which the target speaker is inactive are zero. The effectiveness of the proposed method is demonstrated in speaker verification and speaker diarization.},
-    arxiv={2410.12182}
-}
-@misc{moriya2024alignment,
-    title={Alignment-Free Training for Transducer-Based Multi-Talker {ASR}},
-    author={Moriya, Takafumi and Horiguchi, Shota and Delcroix, Marc and Masumura, Ryo and Ashihara, Takanori and Sato, Hiroshi and Matsuura, Kohei and Mimura, Masato},
-    year={2024},
-    month=sep,
-    howpublished={arxiv:2409.20301},
-    abbr={Preprint},
-    abstract={Extending the RNN Transducer (RNNT) to recognize multi-talker speech is essential for wider automatic speech recognition (ASR) applications. Multi-talker RNNT (MT-RNNT) aims to achieve recognition without relying on costly front-end source separation. MT-RNNT is conventionally implemented using architectures with multiple encoders or decoders, or by serializing all speakers' transcriptions into a single output stream. The first approach is computationally expensive, particularly due to the need for multiple encoder processing. In contrast, the second approach involves a complex label generation process, requiring accurate timestamps of all words spoken by all speakers in the mixture, obtained from an external ASR system. In this paper, we propose a novel alignment-free training scheme for the MT-RNNT (MT-RNNT-AFT) that adopts the standard RNNT architecture. The target labels are created by appending a prompt token corresponding to each speaker at the beginning of the transcription, reflecting the order of each speaker's appearance in the mixtures. Thus, MT-RNNT-AFT can be trained without relying on accurate alignments, and it can recognize all speakers' speech with just one round of encoder processing. Experiments show that MT-RNNT-AFT achieves performance comparable to that of the state-of-the-art alternatives, while greatly simplifying the training process.},
-    arxiv={2409.20301}
-}
 @misc{namba2024thresholding,
     title={Thresholding Data Shapley for Data Cleansing Using Multi-Armed Bandits},
     author={Namba, Hiroyuki, and Horiguchi, Shota, and Hamamoto, Masaki and Egi, Masashi},
