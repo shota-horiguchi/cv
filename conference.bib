@@ -1,4 +1,24 @@
 % First author
+@inproceedings{horiguchi2025mitigating,
+    title={Mitigating Non-Target Speaker Bias in Guided Speaker Embedding},
+    author={Horiguchi, Shota and Ashihara, Takanori and Delcroix, Marc and Ando, Atsushi and Tawara, Naohiro},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    year={2025},
+    month=aug,
+    abbr={INTERSPEECH},
+    keywords={first},
+    abstract={Obtaining high-quality speaker embeddings in multi-speaker conditions is crucial for many applications. A recently proposed guided speaker embedding framework, which utilizes speech activities of target and non-target speakers as clues, drastically improved embeddings under severe overlap with small degradation in low-overlap cases. However, since extreme overlaps are rare in natural conversations, this degradation cannot be overlooked. This paper first reveals that the degradation is caused by the global-statistics-based modules, widely used in speaker feature extractors, being overly sensitive to intervals containing only non-target speakers. As a countermeasure, we propose an extension of such modules that exploit the target speaker activity clues, to compute statistics from intervals where the target is active. The proposed method improves speaker verification performance in both low and high overlap ratios, and diarization performance on multiple datasets.},
+}
+@inproceedings{horiguchi2025pretraining,
+    title={Pretraining Multi-Speaker Identification for Neural Speaker Diarization},
+    author={Horiguchi, Shota and Ando, Atsushi and Tawara, Naohiro and Delcroix, Marc},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    year={2025},
+    month=aug,
+    abbr={INTERSPEECH},
+    keywords={first},
+    abstract={End-to-end speaker diarization enables accurate overlap-aware diarization by jointly estimating multiple speakers' speech activities in parallel. This approach is data-hungry, requiring a large amount of labeled conversational data, which cannot be fully obtained from real datasets alone. To address this issue, large-scale simulated data is often used for pretraining, but it requires enormous storage and I/O capacity, and simulating data that closely resembles real conversations remains challenging. In this paper, we propose pretraining a model to identify multiple speakers from an input fully overlapped mixture as an alternative to pretraining a diarization model. This method eliminates the need to prepare a large-scale simulated dataset while leveraging large-scale speaker recognition datasets for training. Through comprehensive experiments, we demonstrate that the proposed method enables a highly accurate yet lightweight local diarization model without simulated conversational data.},
+}
 @inproceedings{horiguchi2025guided,
     title={Guided Speaker Embedding},
     author={Horiguchi, Shota and Moriya, Takafumi and Ando, Atsushi and Ashihara, Takanori and Sato, Hiroshi and Tawara, Naohiro and Delcroix, Marc},
@@ -181,6 +201,26 @@
 }
 
 % Co-author
+@inproceedings{ashihara2025analysis,
+    title={Analysis of Semantic and Acoustic Token Variability Across Speech, Music, and Audio Domains},
+    author={Ashihara, Takanori and Delcroix, Marc and Ochiai, Tsubasa and Matsuura, Kohei and Horiguchi, Shota},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    year={2025},
+    month=aug,
+    abbr={INTERSPEECH},
+    keywords={first},
+    abstract={Techniques for discrete audio representation, which convert an audio signal into a sequence of audio tokens using neural audio codecs or self-supervised speech models, have gained attention for offering the possibility of modeling audio with large language models (LM) efficiently. While these audio tokens have been studied in various domains (e.g., speech, music, and general sound), their encoding properties across domains remain unclear. This paper examines several audio token types to analyze cross-domain variations. Our major findings include that audio tokens exhibit consistent statistical structures and probabilistic predictability deduced from rank-frequency distribution and perplexity, regardless of the domain. However, the token usage pattern is somewhat domain-dependent. This result underpins the steady success of the versatile audio LM, while also suggesting that domain-aware LM could further optimize performance by better capturing domain-specific token usage},
+}
+@inproceedings{fujita2025voice,
+    title={Voice Impression Control in Zero-Shot {TTS}},
+    author={Fujita, Kenichi and Horiguchi, Shota and Ijima, Yusuke},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    year={2025},
+    month=aug,
+    abbr={INTERSPEECH},
+    keywords={first},
+    abstract={Para-/non-linguistic information in speech is pivotal in shaping the listeners' impression. Although zero-shot text-to-speech (TTS) has achieved high speaker fidelity, modulating subtle para-/non-linguistic information to control perceived voice characteristics, i.e., impressions, remains challenging. We have therefore developed a voice impression control method in zero-shot TTS that utilizes a low-dimensional vector to represent the intensities of various voice impression pairs (e.g., dark–bright). The results of both objective and subjective evaluations have demonstrated our method's effectiveness in impression control. Furthermore, generating this vector via a large language model enables target-impression generation from a natural language description of the desired impression, thus eliminating the need for manual optimization.},
+}
 @inproceedings{tawara2025multi,
     title={Multi-channel Speaker Counting for {EEND-VC}-based Speaker Diarization on Multi-domain Conversation},
     author={Tawara, Naohiro and Ando, Atsushi and Horiguchi, Shota and Delcroix, Marc},
