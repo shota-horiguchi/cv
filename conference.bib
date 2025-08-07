@@ -1,4 +1,15 @@
 % First author
+@inproceedings{horiguchi2025can,
+    title={Can We Really Repurpose Multi-Speaker {ASR} Corpus for Speaker Diarization?},
+    author={Horiguchi, Shota and Tawara, Naohiro and Ashihara, Takanori and Ando, Atsushi and Delcroix, Marc},
+    booktitle={IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+    year={2025},
+    month=dec,
+    abbr={ASRU},
+    abstract={Neural speaker diarization is widely used for overlap-aware speaker diarization, but it requires large multi-speaker datasets for training. To meet this data requirement, large datasets are often constructed by combining multiple corpora, including those originally designed for multi-speaker automatic speech recognition (ASR). However, ASR datasets often feature loosely defined segment boundaries that do not align with the stricter conventions of diarization benchmarks. In this work, we show that such boundary looseness significantly impacts the diarization error rate, reducing evaluation reliability. We also reveal that models trained on data with varying boundary precision tend to learn dataset-specific looseness, leading to poor generalization across out-of-domain datasets. Training with standardized tight boundaries via forced alignment improves not only diarization performance, especially in streaming scenarios, but also ASR performance when combined with simple post-processing.},
+    arxiv={2507.09226},
+    keywords={first},
+}
 @inproceedings{horiguchi2025mitigating,
     title={Mitigating Non-Target Speaker Bias in Guided Speaker Embedding},
     author={Horiguchi, Shota and Ashihara, Takanori and Delcroix, Marc and Ando, Atsushi and Tawara, Naohiro},
