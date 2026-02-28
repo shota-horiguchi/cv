@@ -226,6 +226,8 @@
     year={2026},
     month=may,
     abbr={ICASSP},
+    arxiv={2602.04217},
+    abstract={Discretized representations of speech signals are efficient alternatives to continuous features for various speech applications, including automatic speech recognition (ASR) and speech language models. However, these representations, such as semantic or phonetic tokens derived from clustering outputs of self-supervised learning (SSL) speech models, are susceptible to environmental noise, which can degrade backend task performance. In this work, we introduce a frontend system that estimates clean speech tokens from noisy speech and evaluate it on an ASR backend using semantic tokens. We consider four types of enhancement models based on their input/output domains: wave-to-wave, token-to-token, continuous SSL features-to-token, and wave-to-token. These models are trained independently of ASR backends. Experiments on the CHiME-4 dataset demonstrate that wave-to-token enhancement achieves the best performance among the frontends. Moreover, it mostly outperforms the ASR system based on continuous SSL features.}
 }
 @inproceedings{tawara2026chunk,
     title={Target-Speaker Voice Activity Detection with Chunk-Level Speaker Queries},
@@ -234,6 +236,7 @@
     year={2026},
     month=may,
     abbr={ICASSPW},
+    abstract={Target speaker voice activity detection (TS-VAD) is a powerful approach for refining the outputs of diarization systems by re-estimating each speaker's activity conditioned on that speaker's embedding. Conventional TS-VAD methods typically rely on speaker embeddings extracted from the entire session, but this limits the model's ability to capture intra-session acoustic variety and leads to suboptimal speaker diarization performance. To address this issue, we propose a novel TS-VAD framework that employs fine-grained speaker queries dynamically estimated for each audio chunk. To realize this framework, we explore several architectural variants that integrate self-supervised feature extractors, attention-based conditioning mechanisms, and a two-stage training strategy to jointly enforce session-level consistency while enabling fine-grained chunk-level specification. Evaluated on the DIHARD III corpus, our method improves the state-of-the-art result by the DiariZen initial diarization system.}
 }
 @inproceedings{ashihara2025analysis,
     title={Analysis of Semantic and Acoustic Token Variability Across Speech, Music, and Audio Domains},
@@ -243,6 +246,7 @@
     month=aug,
     abbr={INTERSPEECH},
     abstract={Techniques for discrete audio representation, which convert an audio signal into a sequence of audio tokens using neural audio codecs or self-supervised speech models, have gained attention for offering the possibility of modeling audio with large language models (LM) efficiently. While these audio tokens have been studied in various domains (e.g., speech, music, and general sound), their encoding properties across domains remain unclear. This paper examines several audio token types to analyze cross-domain variations. Our major findings include that audio tokens exhibit consistent statistical structures and probabilistic predictability deduced from rank-frequency distribution and perplexity, regardless of the domain. However, the token usage pattern is somewhat domain-dependent. This result underpins the steady success of the versatile audio LM, while also suggesting that domain-aware LM could further optimize performance by better capturing domain-specific token usage},
+    html={https://www.isca-archive.org/interspeech_2025/ashihara25_interspeech.html}
 }
 @inproceedings{fujita2025voice,
     title={Voice Impression Control in Zero-Shot {TTS}},
@@ -252,7 +256,8 @@
     month=aug,
     abbr={INTERSPEECH},
     abstract={Para-/non-linguistic information in speech is pivotal in shaping the listeners' impression. Although zero-shot text-to-speech (TTS) has achieved high speaker fidelity, modulating subtle para-/non-linguistic information to control perceived voice characteristics, i.e., impressions, remains challenging. We have therefore developed a voice impression control method in zero-shot TTS that utilizes a low-dimensional vector to represent the intensities of various voice impression pairs (e.g., dark-bright). The results of both objective and subjective evaluations have demonstrated our method's effectiveness in impression control. Furthermore, generating this vector via a large language model enables target-impression generation from a natural language description of the desired impression, thus eliminating the need for manual optimization.},
-    arxiv={2506.05688}
+    arxiv={2506.05688},
+    html={https://www.isca-archive.org/interspeech_2025/fujita25_interspeech.html}
 }
 @inproceedings{tawara2025multi,
     title={Multi-channel Speaker Counting for {EEND-VC}-based Speaker Diarization on Multi-domain Conversation},
