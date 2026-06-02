@@ -1,4 +1,14 @@
 % First author
+@inproceedings{
+    title={Tight Boundary Prediction in Speaker Diarization Using Causal--Anticausal Consistency},
+    author={Horiguchi, Shota and Delcroix, Marc and Tawara, Naohiro and Ashihara, Takanori and Ando, Atsushi},
+    booktitle={The Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+    year={2026},
+    month=sep,
+    abbr={INTERSPEECH},
+    abstract={Multi-talker conversational automatic speech recognition data are often used to train speaker diarization models. Because such data prioritize semantic continuity, pauses and boundary margins are included within speech segments, resulting in loose annotations. Models trained on such data tend to internalize mechanisms that reproduce this looseness, although tight speech intervals are sometimes preferable for downstream applications. In this paper, we address the novel task of enabling models to produce tight predictions using loose labels. Our method generates tighter pseudo labels using causal and anticausal models, which are inherently incapable of learning loosening behavior. We further propose a co-training scheme that iteratively tightens labels and updates both models for more progressive refinement. Experimental results show that the proposed method recovers about 70 % of the tightening effect achieved by ideal tight-label training and improves downstream performance.},
+    keywords={first}
+}
 @inproceedings{horiguchi2025can,
     title={Can We Really Repurpose Multi-Speaker {ASR} Corpus for Speaker Diarization?},
     author={Horiguchi, Shota and Tawara, Naohiro and Ashihara, Takanori and Ando, Atsushi and Delcroix, Marc},
@@ -241,7 +251,8 @@
     abbr={ICASSPW},
     pages={22202--22206},
     abstract={Target speaker voice activity detection (TS-VAD) is a powerful approach for refining the outputs of diarization systems by re-estimating each speaker's activity conditioned on that speaker's embedding. Conventional TS-VAD methods typically rely on speaker embeddings extracted from the entire session, but this limits the model's ability to capture intra-session acoustic variety and leads to suboptimal speaker diarization performance. To address this issue, we propose a novel TS-VAD framework that employs fine-grained speaker queries dynamically estimated for each audio chunk. To realize this framework, we explore several architectural variants that integrate self-supervised feature extractors, attention-based conditioning mechanisms, and a two-stage training strategy to jointly enforce session-level consistency while enabling fine-grained chunk-level specification. Evaluated on the DIHARD III corpus, our method improves the state-of-the-art result by the DiariZen initial diarization system.},
-    html={https://ieeexplore.ieee.org/document/11462555}
+    html={https://ieeexplore.ieee.org/document/11462555},
+    code={https://github.com/nttcslab-sp/chunk-level_TS-VAD}
 }
 @inproceedings{ashihara2025analysis,
     title={Analysis of Semantic and Acoustic Token Variability Across Speech, Music, and Audio Domains},
