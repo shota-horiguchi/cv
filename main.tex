@@ -20,11 +20,42 @@
 \usepackage{tabularx}
 %\usepackage{cite}
 \usepackage{csquotes}
+\usepackage{xcolor}
+\definecolor{papertitlelink}{HTML}{0066CC}
 \input{glyphtounicode}
 
 
 %\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false,backend=biber]{biblatex}
 \usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=none,dashed=false,citestyle=numeric-comp,backend=biber]{biblatex}
+% html という独自フィールドを biblatex/biber に認識させる
+% bib の html フィールドを biblatex 標準フィールド usera に写す
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=html, fieldtarget=usera]
+    }
+    \map{
+      \step[fieldsource=arxiv, fieldtarget=userb]
+    }
+  }
+}
+
+% タイトルリンク用の共通マクロ
+% 優先順位: html > arxiv > リンクなし
+\newcommand{\linkedbibtitle}[1]{%
+  \iffieldundef{usera}
+    {%
+      \iffieldundef{userb}
+        {#1}
+        {\href{https://arxiv.org/abs/\thefield{userb}}{\textcolor{papertitlelink}{#1}}}%
+    }
+    {\href{\thefield{usera}}{\textcolor{papertitlelink}{#1}}}%
+}
+% inproceedings に限らず title フィールドすべてに適用
+\DeclareFieldFormat*{title}{%
+  \mkbibquote{\linkedbibtitle{#1\isdot}}%
+}
+
 \addbibresource{journal.bib}
 \addbibresource{conference.bib}
 \addbibresource{preprint.bib}
@@ -141,7 +172,7 @@
 %   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
 %   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
-
+(Updated on Jun. 5, 2026)
 \begin{center}
     \textbf{\Huge \scshape Shota Horiguchi} \\ \vspace{1pt}
     \href{mailto:horiguchi@ieee.org}{\underline{horiguchi@ieee.org}} $|$ 
@@ -266,13 +297,15 @@
     \resumeShortSubheading
       {\textbf{Invited Talk}}{}
       \resumeItemListStart
-        \resumeItem{``Face-Voice Matching Using Cross-Modal Embeddings,'' in MIRU, July 29--Aug. 1, 2020.}
+        \resumeItem{``Speaker Diarization: A Key to Solving Cocktail Party Problem,'' in IEEE RO-MAN Workshop, Aug. 28, 2023.}
         \resumeItem{``Face-Voice Matching Using Cross-Modal Embeddings,'' in MIRU, July 29--Aug. 1, 2020 (in Japanese).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 \section{Awards}
   \resumeItemListStart
+    \resumeItem{IEEE SPS Young Author Best Paper Award, 2025.}
+    \resumeItem{IEEE SPS Japan Young Auhor Best Paper Award, 2025.}
     \resumeItem{Honorable Mention Award at IEEE Spoken Language Technology Workshop, 2024.}
     \resumeItem{Itakura Prize Innovative Young Researcher Award, The Acoustical Society of Japan, 2023.}
     \resumeItem{ITE Outstanding Research Presentation Award, The Institute of Image Information and Television Engineers, 2017.}
@@ -298,7 +331,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Journals}{: IEEE/ACM Transactions on Audio, Speech, and Language processing, IEEE Transactions on Multimedia, IEEE Transactions on Neural Networks and Learning Systems, IEEE Transactions on Pattern Recognition and Machine Intelligence, IEEE Transactions on Affective Computing, Computer Speech \& Language, Speech Communication, EURASIP Journal on Audio, Speech and Language Processing, Neural Networks} \\
-     \textbf{Conferences/Workshops}{: ICASSP (2019--2023), EUSIPCO (2021--2023) , SLT (2022), WASPAA (2023), DCASE (2021--2021, 2023), MLSP (2021, 2023), MMSP (2023), APSIPA ASC (2021), RO-MAN (2022), ICML (2020)}
+     \textbf{Conferences/Workshops}{: ICASSP, EUSIPCO, ASRU, SLT, WASPAA, DCASE, MLSP, MMSP, APSIPA ASC, ACMMM, RO-MAN, ICML}
     }}
  \end{itemize}
 %
