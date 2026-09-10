@@ -1,4 +1,15 @@
 % First author
+@inproceedings{horiguchi2026over,
+    title={Over-Tightening-Aware Pseudo-Labeling for Tight Boundary Speaker Diarization},
+    author={Horiguchi, Shota and Ashihara, Takanori and Delcroix, Marc and Tawara, Naohiro and Plaquet, Alexis},
+    booktitle={IEEE Spoken Language Technology Workshop (SLT)},
+    year={2026},
+    month=dec,
+    abbr={SLT},
+    abstract={Training speaker diarization models on loose labels, such as speech segments with padded boundaries or filled pauses, often results in similarly loose model outputs. To obtain tighter boundaries, pseudo-labeling based on the averaged outputs of causal and anticausal models has been proposed. However, since the pseudo-labels are estimation-based, they can suffer from over-tightening, which increases missed detections that can propagate as unrecoverable errors to downstream tasks. This paper carefully analyzes the causes of over-tightening and proposes three approaches to address them: (i) removing pause filling rather than padding, (ii) introducing a burn-in phase to mitigate missed detections near the beginning of causal and anticausal predictions, and (iii) making pseudo-label-based co-training aware of the non-causal model used for final inference. Experimental results show that the proposed method reduces missed detections caused by over-tightening and improves both diarization accuracy and downstream multi-talker ASR performance.},
+    arxiv={2609.09965},
+    keywords={first}
+}
 @inproceedings{horiguchi2026tight,
     title={Tight Boundary Prediction in Speaker Diarization Using Causal--Anticausal Consistency},
     author={Horiguchi, Shota and Delcroix, Marc and Tawara, Naohiro and Ashihara, Takanori and Ando, Atsushi},
@@ -231,6 +242,24 @@
 }
 
 % Co-author
+@inproceedings{moriya2026blank,
+    title={Blank-Only Transducer for Efficient Streaming {ASR}},
+    author={Moriya, Takafumi and Sato, Hiroshi and Masumura, Ryo and Horiguchi, Shota and Delcroix, Marc},
+    booktitle={IEEE Spoken Language Technology Workshop (SLT)},
+    year={2026},
+    month=dec,
+    abbr={SLT},
+    abstract={Streaming automatic speech recognition (ASR) requires accurate frame-synchronous alignments and efficient training. Transducer models support streaming ASR, but their training is computationally expensive because it marginalizes over all possible audio-label alignments. In contrast, attention-based encoder-decoder (AED) models are easier to train, but making them streamable typically requires external or unreliable alignments and/or heuristics. To combine the strengths of Transducer and AED, we propose Blank-only Transducer (BoT), an autoregressive alignment model that learns only blank/non-blank alignments conditioned on audio and label contexts without explicitly predicting label probabilities as the standard Transducer does. The non-blank alignments estimated by BoT are used as triggers to activate chunked cross-attention during training and decoding, enabling streaming chunked AED jointly trained with BoT. We refer to this streaming ASR framework as Streamer. Experiments across multiple domains, including multi-talker ASR, show that Streamer matches the Transducer while reducing peak GPU memory by 56-66% and improving training speed by 2.0--2.5x.},
+}
+@inproceedings{singh2026learning,
+    title={Learning Speaker Activity-Conditioned WavLM Speaker Embeddings with Real Conversational Data},
+    author={Singh, Prachi and Phong, Nguyen Hai and P{\'a}lka, Petr and Han, Jiangyu and Delcroix, Marc and Horiguchi, Shota and Tawara, Naohiro and Burget, Luk{\'a}{\v{s}}},
+    booktitle={IEEE Spoken Language Technology Workshop (SLT)},
+    year={2026},
+    month=dec,
+    abbr={SLT},
+    abstract={End-to-end neural diarization with vector clustering (EEND-VC) is a strong framework for long-form conversational diarization, where speaker embeddings are used to link local speaker decisions across windows. Conventional EEND-VC systems extract these embeddings by cutting out regions assigned to each local speaker, preferably using only non-overlapped speech. This works well when enough clean target-speaker speech is available, but it discards useful speaker evidence in overlapped regions and becomes unreliable when a local speaker appears mostly in overlap. We propose a speaker-activity-conditioned embedding extractor that adapts a pretrained WavLM-MHFA speaker verification model to extract target-speaker embeddings directly from full conversational windows. Inspired by the recently proposed diarization-conditioned Whisper (DiCoW) model for target-speaker ASR, frame-level diarization-dependent transformations inject local speaker-activity information into intermediate WavLM representations while preserving the pretrained initialization. Experiments on multiple conversational diarization benchmarks show that fine-tuning with limited real meeting data reduces speaker-confusion errors and improves EEND-VC diarization performance. The results further indicate that real conversational data provides an effective alternative to large-scale simulated-mixture training for diarization-aware speaker embedding extraction.}
+}
 @inproceedings{ashihara2026frontend,
     title={Frontend Token Enhancement for Token-based Speech Recognition},
     author={Ashihara, Takanori and Horiguchi, Shota and Matsuura, Kohei and Ochiai, Tsubasa and Delcroix, Marc},
