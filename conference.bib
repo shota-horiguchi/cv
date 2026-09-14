@@ -8,7 +8,6 @@
     abbr={SLT},
     abstract={Training speaker diarization models on loose labels, such as speech segments with padded boundaries or filled pauses, often results in similarly loose model outputs. To obtain tighter boundaries, pseudo-labeling based on the averaged outputs of causal and anticausal models has been proposed. However, since the pseudo-labels are estimation-based, they can suffer from over-tightening, which increases missed detections that can propagate as unrecoverable errors to downstream tasks. This paper carefully analyzes the causes of over-tightening and proposes three approaches to address them: (i) removing pause filling rather than padding, (ii) introducing a burn-in phase to mitigate missed detections near the beginning of causal and anticausal predictions, and (iii) making pseudo-label-based co-training aware of the non-causal model used for final inference. Experimental results show that the proposed method reduces missed detections caused by over-tightening and improves both diarization accuracy and downstream multi-talker ASR performance.},
     arxiv={2609.09965},
-    code={https://github.com/nttcslab-sp/der-decomposition},
     keywords={first}
 }
 @inproceedings{horiguchi2026tight,
