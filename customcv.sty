@@ -7,6 +7,25 @@
   \def\firstinit{#3}}
 \boldname{}{}{}
 
+% 現在の著者番号が userc のリストに含まれていれば * を付ける
+\ExplSyntaxOn
+\newcommand*{\equalcontributionmark}{%
+  \iffieldundef{userc}
+    {}
+    {\usefield{\equalcontributionmarkaux}{userc}}%
+}
+\newcommand*{\equalcontributionmarkaux}[1]{%
+  \begingroup
+  \def\do##1{%
+    \ifnumequal{##1}{\value{listcount}}
+      {\textsuperscript{*}}
+      {}%
+  }%
+  \docsvlist{#1}%
+  \endgroup
+}
+\ExplSyntaxOff
+
 \renewcommand{\mkbibnamegiven}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
   {\mkbibbold{#1}}{#1}%
@@ -15,4 +34,15 @@
 \renewcommand{\mkbibnamefamily}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
   {\mkbibbold{#1}}{#1}%
+  \equalcontributionmark
+}
+
+\renewbibmacro*{finentry}{%
+  \iffieldundef{userc}
+    {}
+    {%
+      \setunit{\addspace}%
+      \printtext{\mkbibparens{*equal contribution}}%
+    }%
+  \finentry
 }
