@@ -67,6 +67,18 @@
 }
 
 % Co-author
+@article{plaquet2026dissecting,
+    title={Dissecting the Segmentation Model of End-to-End Diarization with Vector Clustering},
+    author={Plaquet, Alexis and Tawara, Naohiro and Delcroix, Marc and Horiguchi, Shota and Ando, Atsushi and Araki, Shoko and Bredin, Herv\'{e}},
+    journal={Computer Speech \& Language},
+    pages = {102062},
+    year={2026},
+    month=oct,
+    abbr={CSL},
+    abstract={End-to-End Neural Diarization with Vector Clustering is a powerful and practical approach to perform Speaker Diarization. Multiple improvements have been proposed for the segmentation model of these pipelines, but their synergy had not been thoroughly evaluated. In this work, we provide an in-depth analysis of the impact of major system design choices on the performance of the pipeline. We investigate different encoder approaches (lightweight SincNet-based encoder trained for diarization, and a significantly larger WavLM trained with self-supervised learning), different decoders (LSTM, Mamba, and Conformer), different losses (multilabel and multiclass powerset), and different chunk sizes. Through in-depth experiments across nine datasets, we found that the fine-tuned WavLM-based encoder consistently yields the best systems by a wide margin. The LSTM decoder is outclassed by Mamba- and Conformer-based decoders, and while we found Mamba more robust to other architecture choices, it is slightly inferior to our best architecture, which uses a Conformer decoder. We found that multilabel and multiclass powerset losses do not have the same distribution of errors. We confirmed that the multiclass loss helps almost all models attain superior performance, except when finetuning WavLM, in which case, multilabel is the superior choice. We also evaluated the impact of the chunk size on all aforementioned architecture choices and found that newer architectures tend to better handle long chunk sizes, which can greatly improve pipeline performance.},
+    html={https://www.sciencedirect.com/science/article/abs/pii/S0885230826001257},
+    arxiv={2502.11605}
+}
 @article{kamo2026microphone,
     title={Microphone Array Geometry Independent Multi-Talker Distant {ASR}: {NTT} System for the {DASR} Task of the {CHiME}-8 Challenge},
     journal={Computer Speech \& Language},
@@ -75,7 +87,6 @@
     pages={101820},
     year={2026},
     month=jan,
-    pages={101820},
     abbr={CSL},
     abstract={In this paper, we introduce a multi-talker distant automatic speech recognition (DASR) system we designed for the DASR task 1 of the CHiME-8 challenge. Our system performs speaker counting, diarization, and ASR. It handles a variety of recording conditions, from dinner parties to professional meetings and from two speakers to eight. We perform diarization first, followed by speech enhancement, and then ASR as the challenge baseline. However, we introduced several key refinements. First, we derived a powerful speaker diarization relying on end-to-end speaker diarization with vector clustering (EEND-VC), multi-channel speaker counting using enhanced embeddings from EEND-VC, and target-speaker voice activity detection (TS-VAD). For speech enhancement, we introduced a novel microphone selection rule to better select the most relevant microphones among those distributed microphones and investigated improvements to beamforming. Finally, for ASR, we developed several models exploiting Whisper and WavLM speech foundation models. In this paper, we present the original results we submitted to the challenge and updated results we obtained afterward. Our strongest system achieves a 63\% relative macro tcpWER improvement over the baseline and outperforms the challenge best results on the NOTSOFAR-1 meeting evaluation data among geometry-independent systems.},
     html={https://www.sciencedirect.com/science/article/pii/S0885230825000452},

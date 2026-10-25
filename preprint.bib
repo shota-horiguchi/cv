@@ -10,16 +10,6 @@
     code={https://github.com/nttcslab-sp/der-decomposition},
     keywords={first}
 }
-@misc{plaquet2025dissecting,
-    title={Dissecting the Segmentation Model of End-to-End Diarization with Vector Clustering},
-    author={Plaquet, Alexis and Tawara, Naohiro and Delcroix, Marc and Horiguchi, Shota and Ando, Atsushi and Araki, Shoko and Bredin, Herv\'{e}},
-    year={2025},
-    month=jun,
-    howpublished={arXiv:2506.11605},
-    abbr={Preprint},
-    abstract={End-to-End Neural Diarization with Vector Clustering is a powerful and practical approach to perform Speaker Diarization. Multiple enhancements have been proposed for the segmentation model of these pipelines, but their synergy had not been thoroughly evaluated. In this work, we provide an in-depth analysis on the impact of major architecture choices on the performance of the pipeline. We investigate different encoders (SincNet, pretrained and finetuned WavLM), different decoders (LSTM, Mamba, and Conformer), different losses (multilabel and multiclass powerset), and different chunk sizes. Through in-depth experiments covering nine datasets, we found that the finetuned WavLM-based encoder always results in the best systems by a wide margin. The LSTM decoder is outclassed by Mamba- and Conformer-based decoders, and while we found Mamba more robust to other architecture choices, it is slightly inferior to our best architecture, which uses a Conformer encoder. We found that multilabel and multiclass powerset losses do not have the same distribution of errors. We confirmed that the multiclass loss helps almost all models attain superior performance, except when finetuning WavLM, in which case, multilabel is the superior choice. We also evaluated the impact of the chunk size on all aforementioned architecture choices and found that newer architectures tend to better handle long chunk sizes, which can greatly improve pipeline performance. Our best system achieved state-of-the-art results on five widely used speaker diarization datasets.},
-    arxiv={2506.11605}
-}
 @misc{namba2024thresholding,
     title={Thresholding Data Shapley for Data Cleansing Using Multi-Armed Bandits},
     author={Namba, Hiroyuki, and Horiguchi, Shota, and Hamamoto, Masaki and Egi, Masashi},
